@@ -10,7 +10,7 @@
 }
 
 /* *{
-    outline: solid red 1px;
+    outline: solid red 1px; 
 }   */
 
 /* Estilo Geral */
@@ -183,7 +183,7 @@ footer {
 }
 
 .contact-form-section h2 {
-    color: var(--roxo);
+    color: var(--branco);
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -191,6 +191,8 @@ footer {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
+    background-color: transparent --cinza-escuro;
+    backdrop-filter: blur(17px);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -207,7 +209,9 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    display: block;
+    margin: auto;
+    width: 90%;
     padding: 10px;
     border: 1px solid var(--cinza-escuro);
     border-radius: 5px;
