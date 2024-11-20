@@ -9,6 +9,10 @@
     --branco: #FFFFFF;
 }
 
+/* *{
+    outline: solid red 1px;
+}   */
+
 /* Estilo Geral */
 body {
     margin: 0;
@@ -32,10 +36,22 @@ header {
 }
 
 .logo {
-    width: 100px;
-    height: 40px;
-    background-color: var(--cinza-escuro);
+    display: flex;
+    width: 150px;
+    height: 60px;
     border-radius: 5px;
+    justify-content: center;
+    align-items: middle;
+}
+
+.logo img{
+    object-position: center;
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo :hover{
+    transform: scale(1.3);
 }
 
 .nav-menu {
@@ -60,8 +76,12 @@ header {
 .hero {
     text-align: center;
     padding: 60px 0;
+    height: 500px;
     background-image: url(/Midias/gato.jpg);
-    color: var(--roxo);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--branco);
 }
 
 .hero h1 {
@@ -150,4 +170,67 @@ footer {
 
 .footer-column ul li a:hover {
     color: var(--dourado-suave);
+}
+
+/* Estilo da Página de Contato */
+.contact-form-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url(/Midias/gato.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-form-section h2 {
+    color: var(--roxo);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: var(--branco);
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--roxo);
+}
+
+.contact-form button {
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--azul-real);
 }
