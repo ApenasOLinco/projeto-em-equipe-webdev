@@ -9,16 +9,33 @@
     --branco: #FFFFFF;
 }
 
-/* *{
-    outline: solid red 1px; 
-}   */
 
 /* Estilo Geral */
+* {
+    box-sizing: border-box; /* Não comentar essa linha! */
+    outline: solid red 1px; 
+}
+
+*::selection {
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+h1 {
+    text-align: center;
 }
 
 /* Cabeçalho */
@@ -237,4 +254,26 @@ footer {
 
 .contact-form button:hover {
     background-color: var(--azul-real);
+}
+
+/* PÁGINAS DE PORTIFOLIO */
+#section-apresentacao {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2%;
+}
+
+#section-apresentacao > * {
+    margin: 0;
+}
+
+#img-apresentacao {
+    min-width: 45%;
+    min-height: 100%;
+}
+
+#img-apresentacao img {
+    display: block;
+    width: 100%;
 }
