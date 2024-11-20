@@ -1,0 +1,153 @@
+/* Variáveis de Cores */
+:root {
+    --roxo: #6A0DAD;
+    --lilas-claro: #D8BFD8;
+    --azul-real: #4169E1;
+    --dourado-suave: #FFD700;
+    --cinza-claro: #F4F4F4;
+    --cinza-escuro: #4B4B4B;
+    --branco: #FFFFFF;
+}
+
+/* Estilo Geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--roxo);
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 40px;
+    background-color: var(--cinza-escuro);
+    border-radius: 5px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.nav-menu li a:hover {
+    color: var(--dourado-suave);
+}
+
+/* Seção Hero */
+.hero {
+    text-align: center;
+    padding: 60px 0;
+    background-image: url(/Midias/gato.jpg);
+    color: var(--roxo);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Seção de Conteúdo */
+.content-section {
+    background-color: var(--roxo);
+    text-align: center;
+    padding: 40px 20px;
+    margin: auto;
+    width:100%;
+}
+
+.content-section h2 {
+    color: var(--branco);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--branco);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    padding: 20px 0;
+}
+
+.footer-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 40px;
+    background-color: var(--cinza-escuro);
+    border-radius: 5px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.footer-column ul li a:hover {
+    color: var(--dourado-suave);
+}
