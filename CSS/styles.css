@@ -19,7 +19,7 @@
     /* outline: solid red 1px;  */
 }
 
-*::selection {
+::selection {
     background-color: var(--roxo);
     color: var(--branco);
 }
