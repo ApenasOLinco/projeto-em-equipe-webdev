@@ -216,7 +216,9 @@ footer {
     max-width: 600px;
 
     background-color: transparent --cinza-escuro;
-    backdrop-filter: blur(17px);
+    /* A DISCUTIR: O backdrop deve aumentar ou diminuir o brilho? Qual fica mais fácil de ler? */
+    /* A DISCUTIR: Eu tentei aumentar a força do BLUR e gostei do resultado. Algo entre 40px e 60px. Deveríamos deixar assim ou aumentar? */
+    backdrop-filter: blur(17px) brightness(1.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     
