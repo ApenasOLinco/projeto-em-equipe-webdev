@@ -16,7 +16,6 @@
 /* Estilo Geral */
 * {
     box-sizing: border-box; /* Não comentar essa linha! */
-    /* outline: solid red 1px;  */
 }
 
 ::selection {
@@ -26,7 +25,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
 }
@@ -211,18 +210,17 @@ footer {
     margin-bottom: 20px;
 }
 
-.contact-form {
+#contact-container {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-
+    
     background-color: transparent --cinza-escuro;
     /* A DISCUTIR: O backdrop deve aumentar ou diminuir o brilho? Qual fica mais fácil de ler? */
     /* A DISCUTIR: Eu tentei aumentar a força do BLUR e gostei do resultado. Algo entre 30px e 60px. Deveríamos deixar assim ou aumentar? */
     backdrop-filter: blur(17px) brightness(1.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    
     gap: 20px;
     margin: 0 auto;
     padding: 20px;
@@ -230,7 +228,7 @@ footer {
 
 .contact-form label {
     font-weight: bold;
-    color: var(--branco);
+    color: #FFFFFF;
     text-align: left;
 }
 
@@ -238,11 +236,12 @@ footer {
 .contact-form textarea {
     display: block;
     margin: auto;
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    border: 1px solid var(--cinza-escuro);
+    margin: 0.5em;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 14px;
+    line-height: 1.5rem;
 }
 
 .contact-form input:focus,
@@ -251,9 +250,11 @@ footer {
     border-color: var(--roxo);
 }
 
-.contact-form button {
+#submit-btn {
     background-color: var(--roxo);
+    max-width: 600px;
     color: var(--branco);
+    margin-top: 1em;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -264,6 +265,20 @@ footer {
 
 .contact-form button:hover {
     background-color: var(--azul-real);
+}
+
+#output-form {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, var(--roxo), #1f122991);
+    color: #ffffff;
+    line-height: 2rem;
+}
+
+#output-form :hover{
+    transform: scale(1.5);
+    color: #FFD700;
 }
 
 /* PÁGINAS DE PORTIFOLIO */
