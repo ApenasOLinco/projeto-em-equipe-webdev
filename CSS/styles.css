@@ -9,7 +9,7 @@
     --branco: #FFFFFF;
 
     /* Variáveis para animação */
-    --transition-tempo: .08s;
+    --transition-tempo: .1s;
 }
 
 
@@ -38,6 +38,7 @@ img {
 }
 
 h1 {
+    margin: 2rem;
     text-align: center;
 }
 
@@ -266,16 +267,8 @@ footer {
 }
 
 /* PÁGINAS DE PORTIFOLIO */
-#section-apresentacao {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2%;
-    margin: 10px;
-}
-
-#section-apresentacao > * {
-    margin: 0;
+#section-apresentacao, #section-video {
+    margin: 2rem 1rem;
 }
 
 #img-apresentacao {
@@ -283,7 +276,19 @@ footer {
     min-height: 100%;
 }
 
-#img-apresentacao img {
+#img-apresentacao {
     display: block;
-    width: 100%;
+    margin: 0 1rem 0 0;
+    width: 40%;
+    float: left;
+}
+
+#section-video {
+    display: flex;
+    aspect-ratio: 3/1;
+    justify-content: center;
+}
+
+iframe {
+    width: 50%;
 }
