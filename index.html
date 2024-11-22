@@ -86,28 +86,6 @@
         </div>
     </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            on: {
-                init: function () {
-                    window.dispatchEvent(new Event('resize'));
-                }
-            }
-        });
-        console.log("Created!")
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
