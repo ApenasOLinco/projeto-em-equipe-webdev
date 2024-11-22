@@ -348,6 +348,10 @@ iframe {
     background: #ffcc00;
 }
 
+.swiper iframe {
+    width: 100%;
+}
+
 @media (max-width: 450px) {
     .swiper {
         height: 270px;
