@@ -44,7 +44,7 @@ function clicou() {
     } else {
         novoForm()
         modoAtual = Modos.MODOFORM
-        botao.innerHTML = "Enviar Form"
+        botao.innerHTML = "Enviar Formulário"
     }
 }
 
