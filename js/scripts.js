@@ -1,5 +1,3 @@
-console.log("TESTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
 // Obter formulário inalterado
 const formularioNovo = document.querySelector(".contact-form").innerHTML
 

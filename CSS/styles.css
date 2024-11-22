@@ -309,3 +309,55 @@ footer {
 iframe {
     width: 50%;
 }
+
+/* CARROSSEL */
+/* Estilos do Carrossel */
+.swiper {
+    height: 500px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de Navegação do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffcc00;
+}
+
+@media (max-width: 450px) {
+    .swiper {
+        height: 270px;
+    }
+}
