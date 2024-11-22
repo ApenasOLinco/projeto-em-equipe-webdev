@@ -300,6 +300,12 @@ footer {
     float: left;
 }
 
+#section-video {
+    display: flex;
+    aspect-ratio: 3/1;
+    justify-content: center;
+}
+
 iframe {
     width: 50%;
 }
