@@ -16,7 +16,7 @@
 /* Estilo Geral */
 * {
     box-sizing: border-box; /* Não comentar essa linha! */
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 ::selection {
@@ -304,7 +304,6 @@ iframe {
     width: 50%;
 }
 
-/* CARROSSEL */
 /* Estilos do Carrossel */
 .swiper {
     height: 500px;
@@ -333,7 +332,6 @@ iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Botões de Navegação do Swiper */
 .swiper-button-next,
 .swiper-button-prev {
     color: white;
