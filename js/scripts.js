@@ -23,19 +23,37 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Created!");
 });
 
+
 // Obter formulário inalterado
-const formularioNovo = document.querySelector(".contact-form").innerHTML
+const formularioVazio = document.querySelector(".contact-form").innerHTML
+const Modos = {
+    MODOFORM: "MODOFORM", // Representa o usuário na página de contato com o formulário não enviado
+    MODOMOSTRAR: "MODOMOSTRAR" // Representa o usuário na página de output do formulário
+}
+
+let modoAtual = Modos.MODOFORM;
 
 function clicou() {
+    const botao = document.getElementById("submit-btn")
+
+    /* Separar as responsabilidades de processamento de clique para que o código fique mais limpo */
+    if(modoAtual === Modos.MODOFORM) {
+        enviarForm()
+        modoAtual = Modos.MODOMOSTRAR
+        botao.innerHTML = "Novo Formulário"
+    } else {
+        novoForm()
+        modoAtual = Modos.MODOFORM
+        botao.innerHTML = "Enviar Form"
+    }
+}
+
+function enviarForm() {
     const formulario = document.querySelector(".contact-form")
     const nome = formulario.querySelector("#nome").value
-    console.log(nome)
     const email = formulario.querySelector("#email").value
-    console.log(email)
     const assunto = formulario.querySelector("#assunto").value
-    console.log(assunto)
     const mensagem = formulario.querySelector("#mensagem").value
-    console.log(mensagem)
 
     let output = `
         <div id="output-form">
@@ -45,18 +63,10 @@ function clicou() {
             MENSAGEM: ${mensagem}<br>
         </div>
     `
-
     formulario.innerHTML = output
-
-    // Setar botão para voltar ao form
-    const botao = document.querySelector("#submit-btn")
-    botao.innerHTML = "Novo Formulario"
-    botao.setAttribute("onclick", "novoForm()")
 }
 
 function novoForm() {
     const formulario = document.querySelector(".contact-form")
-    formulario.innerHTML = formularioNovo
-    const botao = document.querySelector("#submit-btn")
-    botao.innerHTML = "Enviar"
+    formulario.innerHTML = formularioVazio
 }
