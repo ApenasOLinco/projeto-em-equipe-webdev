@@ -9,7 +9,7 @@
     --branco: #FFFFFF;
 
     /* Variáveis para animação */
-    --transition-tempo: .1s;
+    --transition-tempo: .05s;
 }
 
 
@@ -20,8 +20,8 @@
 }
 
 ::selection {
-    background-color: var(--roxo);
-    color: var(--branco);
+    background-color: var(--cinza-claro);
+    color: var(--azul-real);
 }
 
 body {
@@ -57,32 +57,26 @@ header {
 }
 
 .container {
+    margin: auto;
     width: 90%;
     height: 100%;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    /* display: flex; */
     height: 60px;
     border-radius: 5px;
-    /* justify-content: center; */
-    /* align-items: middle; */
-
-    transition: transform var(--transition-tempo) ease-out;
+    transition: transform var(--transition-tempo) ease-in-out;
 }
 
 .logo img{
-    /* object-position: center; */
     width: 100%;
-    object-fit: cover;
 }
 
 .logo :hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -93,15 +87,22 @@ header {
     margin: 0;
 }
 
-.nav-menu li a {
-    text-decoration: none;
-    color: var(--branco);
+.nav-menu li {
     font-weight: bold;
+    color: var(--branco);
+    transition: transform var(--transition-tempo) ease-out;
 }
 
-.nav-menu li a:hover {
+.nav-menu li:hover {
     color: var(--dourado-suave);
+    transform: scale(1.05);
 }
+
+.nav-menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* Seção Hero */
 .hero {
@@ -206,7 +207,8 @@ footer {
 /* Estilo da Página de Contato */
 #contato-container {
     background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
-    animation: gradiente-animacao 10s ease infinite;
+    background-size: 400% 400%;
+    animation: gradiente-animacao 20s ease infinite;
 }
 
 .contact-form-section {
