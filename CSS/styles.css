@@ -199,10 +199,9 @@ footer {
 .contact-form-section {
     text-align: center;
     padding: 40px 20px;
-    background-image: url('../Midias/gato.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
+    background-size: 400% 400%;
+    animation: gradiente-animacao 10s ease infinite;
 }
 
 .contact-form-section h2 {
@@ -357,6 +356,23 @@ iframe {
 .swiper iframe {
     width: 100%;
 }
+
+
+/* Animações */
+@keyframes gradiente-animacao {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 
 @media (max-width: 450px) {
     .swiper {
