@@ -55,7 +55,7 @@ header {
     z-index: 1;
 }
 
-.container {
+#nav-container {
     margin: auto;
     width: 90%;
     height: 100%;
@@ -64,21 +64,21 @@ header {
     align-items: center;
 }
 
-.logo {
+#nav-logo {
     height: 60px;
     border-radius: 5px;
     transition: transform var(--transition-tempo) ease-in-out;
 }
 
-.logo img{
+#nav-logo img{
     width: 100%;
 }
 
-.logo :hover{
+#nav-logo :hover{
     transform: scale(1.05);
 }
 
-.nav-menu {
+#nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -86,18 +86,18 @@ header {
     margin: 0;
 }
 
-.nav-menu li {
+#nav-menu li {
     font-weight: bold;
     color: var(--branco);
     transition: transform var(--transition-tempo) ease-out;
 }
 
-.nav-menu li:hover {
+#nav-menu li:hover {
     color: var(--dourado-suave);
     transform: scale(1.05);
 }
 
-.nav-menu li a {
+#nav-menu li a {
     text-decoration: none;
     color: inherit;
 }
@@ -153,7 +153,7 @@ footer {
     padding: 20px 0;
 }
 
-.footer-container {
+#footer-container {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -162,14 +162,14 @@ footer {
     gap: 20px;
 }
 
-.footer-logo {
+#footer-logo {
     width: 100px;
     height: 40px;
     background-color: var(--cinza-escuro);
     border-radius: 5px;
 }
 
-.footer-columns {
+#footer-columns {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
@@ -204,23 +204,23 @@ footer {
 }
 
 /* Estilo da Página de Contato */
-#contato-container {
+#contato-pagina {
     background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
     background-size: 400% 400%;
     animation: gradiente-animacao 30s ease-in-out infinite;
 }
 
-#contato-container header {
+#contato-pagina header {
     background-color: transparent;
 }
 
-.contact-form-section {
+#contact-form-section {
     text-align: center;
     padding: 40px 20px;
     background-size: 400% 400%;
 }
 
-.contact-form-section h2 {
+#contact-form-section h2 {
     color: var(--branco);
     font-size: 2rem;
     margin-bottom: 20px;
@@ -242,14 +242,14 @@ footer {
     padding: 20px;
 }
 
-.contact-form label {
+#contact-form label {
     font-weight: bold;
     color: #FFFFFF;
     text-align: left;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     display: block;
     margin: auto;
     width: 95%;
@@ -260,8 +260,8 @@ footer {
     line-height: 1.5rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+#contact-form input:focus,
+#contact-form textarea:focus {
     outline: none;
     border-color: var(--roxo);
 }
@@ -279,7 +279,7 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+#contact-form button:hover {
     background-color: var(--azul-real);
 }
 

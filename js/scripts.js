@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Obter formulário inalterado
-const formularioVazio = document.querySelector(".contact-form").innerHTML
+const formularioVazio = document.querySelector("#contact-form").innerHTML
 const Modos = {
     MODOFORM: "MODOFORM", // Representa o usuário na página de contato com o formulário não enviado
     MODOMOSTRAR: "MODOMOSTRAR" // Representa o usuário na página de output do formulário
@@ -34,7 +34,7 @@ const Modos = {
 let modoAtual = Modos.MODOFORM;
 
 function clicou() {
-    const botao = document.getElementById("submit-btn")
+    const botao = document.querySelector("#submit-btn")
 
     /* Separar as responsabilidades de processamento de clique para que o código fique mais limpo */
     if(modoAtual === Modos.MODOFORM) {
@@ -49,7 +49,7 @@ function clicou() {
 }
 
 function enviarForm() {
-    const formulario = document.querySelector(".contact-form")
+    const formulario = document.querySelector("#contact-form")
     const nome = formulario.querySelector("#nome").value
     const email = formulario.querySelector("#email").value
     const assunto = formulario.querySelector("#assunto").value
@@ -67,6 +67,6 @@ function enviarForm() {
 }
 
 function novoForm() {
-    const formulario = document.querySelector(".contact-form")
+    const formulario = document.querySelector("#contact-form")
     formulario.innerHTML = formularioVazio
 }
