@@ -26,7 +26,8 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
 }
@@ -44,37 +45,44 @@ h1 {
 
 /* Cabeçalho */
 header {
-    background-color: var(--roxo);
+    width: 100%;
+    height: 80px;
+    
+    background-color: transparent;
+    backdrop-filter: blur(2px);
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .container {
     width: 90%;
-    margin: 0 auto;
+    height: 100%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    display: flex;
-    width: 150px;
+    /* display: flex; */
     height: 60px;
     border-radius: 5px;
-    justify-content: center;
-    align-items: middle;
+    /* justify-content: center; */
+    /* align-items: middle; */
 
-    transition: transform var(--transition-tempo) ease-in-out;
+    transition: transform var(--transition-tempo) ease-out;
 }
 
 .logo img{
-    object-position: center;
+    /* object-position: center; */
     width: 100%;
     object-fit: cover;
 }
 
 .logo :hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .nav-menu {
@@ -123,7 +131,7 @@ header {
     text-align: center;
     padding: 40px 20px;
     margin: auto;
-    width:100%;
+    width: 100%;
 }
 
 .content-section h2 {
@@ -196,12 +204,15 @@ footer {
 }
 
 /* Estilo da Página de Contato */
+#contato-container {
+    background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
+    animation: gradiente-animacao 10s ease infinite;
+}
+
 .contact-form-section {
     text-align: center;
     padding: 40px 20px;
-    background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
     background-size: 400% 400%;
-    animation: gradiente-animacao 10s ease infinite;
 }
 
 .contact-form-section h2 {
