@@ -48,7 +48,6 @@ header {
     width: 100%;
     height: 80px;
     
-    background-color: transparent;
     backdrop-filter: blur(2px);
     padding: 20px 0;
     position: sticky;
@@ -208,7 +207,11 @@ footer {
 #contato-container {
     background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
     background-size: 400% 400%;
-    animation: gradiente-animacao 20s ease infinite;
+    animation: gradiente-animacao 30s ease-in-out infinite;
+}
+
+#contato-container header {
+    background-color: transparent;
 }
 
 .contact-form-section {
