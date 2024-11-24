@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 </head>
-<body>
+<body class="animar-gradiente">
     <header>
         <div id="nav-container">
             <a id="nav-logo" href="index.html">
@@ -26,38 +26,35 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Bem Vindo</h1>
-            <p>ao nosso SITE</p>
-        </section>
-        <section class="content-section">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 (Imagem) -->
-                    <div class="swiper-slide">
-                        <img src="" alt="Imagem 1">
-                    </div>
-                    <!-- Slide 2 (Imagem) -->
-                    <div class="swiper-slide">
-                        <img src="https://via.placeholder.com/800x500.png" alt="Foto 02">
-                    </div>
-                    <!-- Slide 3 (Vídeo do YouTube) -->
-                    <div class="swiper-slide">
-                        <iframe class="d-block w-100" width="100%" height="100%" 
-                                src="https://www.youtube.com/embed/WShCN-AYHqA?autoplay=1&mute=1&loop=1&playlist=WShCN-AYHqA" 
-                                frameborder="0" 
-                                allow="autoplay; encrypted-media" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <section class="hero">
+                        <h1>Bem Vindo</h1>
+                        <p>ao nosso SITE</p>
+                    </section>
                 </div>
-                
-                <!-- Botões de navegação -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="https://via.placeholder.com/800x500.png" alt="Foto 02">
+                </div>
+                <!-- Slide 3 (Vídeo do YouTube) -->
+                <div class="swiper-slide">
+                    <iframe class="d-block w-100" width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/WShCN-AYHqA?autoplay=1&mute=1&loop=1&playlist=WShCN-AYHqA" 
+                            frameborder="0" 
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-        </section>
+            
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
     </main>
 
     <footer>
