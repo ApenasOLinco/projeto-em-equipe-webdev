@@ -10,6 +10,9 @@
 
     /* Variáveis para animação */
     --transition-tempo: .05s;
+
+    /* Valores de tamanho */
+    --altura-header: 80px;
 }
 
 
@@ -46,7 +49,7 @@ h1 {
 /* Cabeçalho */
 header {
     width: 100%;
-    height: 80px;
+    height: var(--altura-header);
     
     backdrop-filter: blur(2px);
     padding: 20px 0;
@@ -205,47 +208,54 @@ footer {
 
 /* Estilo da Página de Contato */
 #contato-pagina {
-    background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
-    background-size: 400% 400%;
-    animation: gradiente-animacao 30s ease-in-out infinite;
+    min-height: 100svh;
 }
 
 #contato-pagina header {
     background-color: transparent;
 }
 
-#contact-form-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-size: 400% 400%;
-}
-
-#contact-form-section h2 {
-    color: var(--branco);
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 #contact-container {
-    display: flex;
-    flex-direction: column;
     max-width: 600px;
     
-    background-color: transparent --cinza-escuro;
+    background-color: transparent;
     /* A DISCUTIR: O backdrop deve aumentar ou diminuir o brilho? Qual fica mais fácil de ler? */
     /* A DISCUTIR: Eu tentei aumentar a força do BLUR e gostei do resultado. Algo entre 30px e 60px. Deveríamos deixar assim ou aumentar? */
     backdrop-filter: blur(17px) brightness(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     gap: 20px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.5%;
+}
+
+.animar-gradiente {
+    background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
+    background-size: 400% 400%;
+    animation: gradiente-animacao 15s ease-in-out infinite;
+}
+
+#contact-form-section h2 {
+    font-size: 2rem;
+
+    letter-spacing: -1px;
+
+    color: var(--branco);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact-form-section fieldset {
+    text-align: center;
+    border: none;
 }
 
 #contact-form label {
+    width: 100%;
     font-weight: bold;
     color: #FFFFFF;
-    text-align: left;
+    text-align: center;
 }
 
 #contact-form input,
@@ -263,7 +273,7 @@ footer {
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
-    border-color: var(--roxo);
+    border-color: var(--cinza-escuro);
 }
 
 #submit-btn {
