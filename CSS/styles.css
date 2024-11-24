@@ -217,6 +217,8 @@ footer {
 
 #contact-container {
     max-width: 600px;
+    display: flex;
+    flex-direction: column ;
     
     background-color: transparent;
     /* A DISCUTIR: O backdrop deve aumentar ou diminuir o brilho? Qual fica mais fácil de ler? */
@@ -270,6 +272,11 @@ footer {
     line-height: 1.5rem;
 }
 
+#contact-form textarea {
+    resize: none;
+    
+}
+
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
@@ -277,7 +284,7 @@ footer {
 }
 
 #submit-btn {
-    background-color: var(--roxo);
+    background-color: #ffffff09;
     max-width: 600px;
     color: var(--branco);
     margin-top: 1em;
@@ -286,20 +293,23 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;   
 }
 
-#contact-form button:hover {
-    background-color: var(--azul-real);
+#submit-btn:hover {
+    transform: scale(1.03);
+    background-color: #ebb624c7;
+    color: var(--branco);
 }
 
 #output-form {
     padding-top: 5em;
     padding-bottom: 5em;
     border-radius: 5px;
-    background-image: linear-gradient(to bottom, var(--roxo), #1f122991);
+    /* background-image: linear-gradient(to bottom, var(--roxo), #1f122991); */
     color: #ffffff;
-    line-height: 2rem;
+    line-height: 3rem;
+    text-align: center;
 }
 
 #output-form :hover{
