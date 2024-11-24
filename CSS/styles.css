@@ -13,6 +13,7 @@
 
     /* Valores de tamanho */
     --altura-header: 80px;
+    --altura-footer: 200px;
 }
 
 
@@ -28,11 +29,17 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     margin: 0;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
+
+    min-height: calc(100svh + var(--altura-footer));
 }
 
 img {
@@ -242,7 +249,7 @@ header {
     background-size: cover;
     
     text-align: center;
-    height: calc(100svh - var(--altura-header));
+    height: 100%;
     color: var(--branco);
 }
 
@@ -263,24 +270,23 @@ header {
 
 /* Estilos do Carrossel */
 .swiper {
+    width: 95%;
     height: 500px;
-    width: 90%;
-    max-width: 800px;
+
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 40px;
 }
 
-/* .swiper-wrapper {
+.swiper-wrapper {
     display: flex;
-} */
+    align-items: center;
+}
 
 .swiper-slide > img {
     max-width: 100%;
     max-height: 100%;
+
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-button-next,
@@ -313,16 +319,20 @@ header {
 
 /* Rodapé */
 footer {
+    flex: 0 0 auto;
+    
     background-color: var(--cinza-escuro);
     color: var(--branco);
     padding: 20px 0;
+    height: var(--altura-footer);
+    width: 100%;
 }
 
 #footer-container {
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
     flex-wrap: wrap;
     gap: 20px;
 }
