@@ -290,6 +290,7 @@ footer {
 }
 
 .footer-column h3 {
+    letter-spacing: normal;
     font-size: 1rem;
     margin-bottom: 10px;
 }
