@@ -9,7 +9,10 @@
     --branco: #FFFFFF;
 
     /* Variáveis para animação */
-    --transition-tempo: .1s;
+    --transition-tempo: .05s;
+
+    /* Valores de tamanho */
+    --altura-header: 80px;
 }
 
 
@@ -20,13 +23,14 @@
 }
 
 ::selection {
-    background-color: var(--roxo);
-    color: var(--branco);
+    background-color: var(--cinza-claro);
+    color: var(--azul-real);
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--cinza-claro);
     color: var(--cinza-escuro);
 }
@@ -37,47 +41,163 @@ img {
     object-position: center;
 }
 
+iframe {
+    display: flex;
+    aspect-ratio: 4/3;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -3px;
+    color: var(--branco);
+}
+
 h1 {
     margin: 2rem;
     text-align: center;
+    font-size: 3rem;
+
+    border-radius: 10px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: brightness(1.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -1px;
+
+    color: var(--branco);
+    margin: 20px 0;
+}
+
+a {
+    color: var(--dourado-suave)
+}
+
+a:visited {
+    color: var(--branco);
+}
+
+section {
+    border-top: var(--dourado-suave) 2px solid;
+    margin: 2rem 1rem;
+}
+
+section:nth-of-type(1) {
+    border-top: none;
+}
+
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    margin: 2% 0;
+}
+
+label {
+    font-weight: bold;
+    color: var(--branco);
+}
+
+/* Tabelas */
+table, td, tr, th {
+    border: solid 1px transparent;
+    /* border-collapse: collapse; */
+}
+
+td, tr th {
+    padding: 1ch;
+}
+
+table {
+    color: var(--branco);
+    margin: 2rem auto;
+    padding: 0;
+    backdrop-filter: brightness(.9);
+}
+
+th {
+    background-color: #d8bfd850;
+}
+
+td {
+    text-align: center;
+}
+
+.animar-gradiente {
+    background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
+    background-size: 400% 400%;
+    animation: gradiente-animacao 15s ease-in-out infinite;
+}
+
+input:not([type="checkbox"]),
+textarea {
+    align-self: center;
+    
+    background-color: transparent;
+    color: var(--branco);
+    backdrop-filter: brightness(.9);
+    
+    width: 95%;
+    padding: 10px;
+    margin: 0.5em;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    backdrop-filter: brightness(.8);
+    border-color: var(--cinza-escuro);
 }
 
 /* Cabeçalho */
 header {
-    background-color: var(--roxo);
+    width: 100%;
+    height: var(--altura-header);
+    
+    backdrop-filter: blur(5px);
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.container {
+#nav-container {
+    margin: auto;
     width: 90%;
-    margin: 0 auto;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    width: 150px;
+#nav-logo {
     height: 60px;
     border-radius: 5px;
-    justify-content: center;
-    align-items: middle;
-
+    overflow: hidden;
     transition: transform var(--transition-tempo) ease-in-out;
 }
 
-.logo img{
-    object-position: center;
-    width: 100%;
-    object-fit: cover;
+#nav-logo img{
+    height: 100%;
 }
 
-.logo :hover{
-    transform: scale(1.1);
+#nav-logo:hover{
+    transform: scale(1.05);
 }
 
-.nav-menu {
+#nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -85,15 +205,22 @@ header {
     margin: 0;
 }
 
-.nav-menu li a {
-    text-decoration: none;
-    color: var(--branco);
+#nav-menu li {
     font-weight: bold;
+    color: var(--branco);
+    transition: transform var(--transition-tempo) ease-out;
 }
 
-.nav-menu li a:hover {
+#nav-menu li:hover {
     color: var(--dourado-suave);
+    transform: scale(1.05);
 }
+
+#nav-menu li a, .footer-column ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* Seção Hero */
 .hero {
@@ -107,11 +234,6 @@ header {
     color: var(--branco);
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
 .hero p {
     font-size: 1.5rem;
     margin: 0;
@@ -123,16 +245,11 @@ header {
     text-align: center;
     padding: 40px 20px;
     margin: auto;
-    width:100%;
+    width: 100%;
 }
 
-.content-section h2 {
-    color: var(--branco);
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.content-section p {
+p {
+    text-indent: 2ch;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--branco);
@@ -145,7 +262,7 @@ footer {
     padding: 20px 0;
 }
 
-.footer-container {
+#footer-container {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -154,14 +271,14 @@ footer {
     gap: 20px;
 }
 
-.footer-logo {
+#footer-logo {
     width: 100px;
     height: 40px;
     background-color: var(--cinza-escuro);
     border-radius: 5px;
 }
 
-.footer-columns {
+#footer-columns {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
@@ -173,6 +290,7 @@ footer {
 }
 
 .footer-column h3 {
+    letter-spacing: normal;
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -186,73 +304,51 @@ footer {
     margin-bottom: 5px;
 }
 
-.footer-column ul li a {
-    text-decoration: none;
-    color: var(--branco);
-}
-
-.footer-column ul li a:hover {
+ul li:hover a {
     color: var(--dourado-suave);
 }
 
 /* Estilo da Página de Contato */
-.contact-form-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-image: url('../Midias/gato.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+#contato-pagina {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.contact-form-section h2 {
-    color: var(--branco);
-    font-size: 2rem;
-    margin-bottom: 20px;
+#contato-pagina main {
+    width: 100%;
+    margin: 5% 0;
+}
+
+#contato-pagina header {
+    background-color: transparent;
 }
 
 #contact-container {
+    max-width: 600px;
+    width: 80%;
+    
     display: flex;
     flex-direction: column;
-    max-width: 600px;
     
-    background-color: transparent --cinza-escuro;
-    /* A DISCUTIR: O backdrop deve aumentar ou diminuir o brilho? Qual fica mais fácil de ler? */
-    /* A DISCUTIR: Eu tentei aumentar a força do BLUR e gostei do resultado. Algo entre 30px e 60px. Deveríamos deixar assim ou aumentar? */
+    background-color: transparent;
     backdrop-filter: blur(17px) brightness(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    gap: 20px;
+
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.5%;
 }
 
-.contact-form label {
-    font-weight: bold;
-    color: #FFFFFF;
-    text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-    display: block;
-    margin: auto;
-    width: 95%;
-    padding: 10px;
-    margin: 0.5em;
-    border-radius: 5px;
-    font-size: 14px;
-    line-height: 1.5rem;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--roxo);
+.inline-fieldset {
+    flex-direction: row;
+    gap: 2%;
+    justify-content: flex-start;
 }
 
 #submit-btn {
-    background-color: var(--roxo);
+    background-color: #ffffff09;
     max-width: 600px;
     color: var(--branco);
     margin-top: 1em;
@@ -261,20 +357,22 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;   
 }
 
-.contact-form button:hover {
-    background-color: var(--azul-real);
+#submit-btn:hover {
+    background-color: #ebb624c7;
+    color: var(--branco);
 }
 
 #output-form {
     padding-top: 5em;
     padding-bottom: 5em;
     border-radius: 5px;
-    background-image: linear-gradient(to bottom, var(--roxo), #1f122991);
+    /* background-image: linear-gradient(to bottom, var(--roxo), #1f122991); */
     color: #ffffff;
-    line-height: 2rem;
+    line-height: 3rem;
+    text-align: center;
 }
 
 #output-form :hover{
@@ -283,27 +381,19 @@ footer {
 }
 
 /* PÁGINAS DE PORTIFOLIO */
-#section-apresentacao, #section-video {
-    margin: 2rem 1rem;
-}
-
-#img-apresentacao {
-    min-width: 40%;
-    min-height: 100%;
-}
-
-#img-apresentacao {
+.img-apresentacao {
     display: block;
-    margin: 0 1rem 0 0;
-    width: 40%;
-    height: fit-content;
+
+    min-width: 10%;
+    width: 30%;
+    min-height: 100%;
+
+    margin: 1em;
     float: left;
 }
 
-#section-video {
-    display: flex;
-    aspect-ratio: 3/1;
-    justify-content: center;
+.img-apresentacao:nth-of-type(even) {
+    float: right;
 }
 
 iframe {
@@ -357,6 +447,23 @@ iframe {
 .swiper iframe {
     width: 100%;
 }
+
+
+/* Animações */
+@keyframes gradiente-animacao {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 
 @media (max-width: 450px) {
     .swiper {
