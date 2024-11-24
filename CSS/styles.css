@@ -46,6 +46,15 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+
+    color: var(--branco);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* Cabeçalho */
 header {
     width: 100%;
@@ -55,7 +64,7 @@ header {
     padding: 20px 0;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 #nav-container {
@@ -137,12 +146,6 @@ header {
     width: 100%;
 }
 
-.content-section h2 {
-    color: var(--branco);
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 .content-section p {
     font-size: 1rem;
     line-height: 1.6;
@@ -208,11 +211,7 @@ footer {
 
 /* Estilo da Página de Contato */
 #contato-pagina {
-    height: 100svh;
-}
-
-#contato-pagina main {
-    vertical-align: middle;
+    min-height: 100svh;
 }
 
 #contato-pagina header {
@@ -221,8 +220,9 @@ footer {
 
 #contact-container {
     max-width: 600px;
+    width: 80%;
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     
     background-color: transparent;
     backdrop-filter: blur(17px) brightness(1.05);
@@ -238,16 +238,6 @@ footer {
     background-image: linear-gradient(45deg, var(--roxo), var(--cinza-escuro), var(--azul-real));
     background-size: 400% 400%;
     animation: gradiente-animacao 15s ease-in-out infinite;
-}
-
-#contact-form-section h2 {
-    font-size: 2rem;
-
-    letter-spacing: -1px;
-
-    color: var(--branco);
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 fieldset {
@@ -278,14 +268,11 @@ textarea {
     backdrop-filter: brightness(.9);
     
     width: 95%;
-    height: 3.2em;
     padding: 10px;
     margin: 0.5em;
     border-radius: 5px;
     font-size: 14px;
     line-height: 1.5rem;
-
-    transition: backdrop-filter var(--transition-tempo) ease;
 }
 
 textarea {

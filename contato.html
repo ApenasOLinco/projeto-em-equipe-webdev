@@ -26,43 +26,41 @@
         </header>
     
         <main>
-            <section id="contact-form-section">
-                <div id="contact-container">
-                    <form id="contact-form">
-                        <h2>Entre em Contato</h2>
-                        <fieldset>
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-                        </fieldset>
-    
-                        <fieldset>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-                        </fieldset>
-    
-                        <fieldset id="field-assunto" class="inline-fieldset">
-                            <label for="assunto">Assunto:</label>
-                            <select id="assunto" name="assunto" required>
-                                <option value="">Selecione o assunto</option>
-                                <option value="duvida">Dúvida</option>
-                                <option value="sugestao">Sugestão</option>
-                                <option value="reclamacao">Reclamação</option>
-                            </select>
-                        </fieldset>
-    
-                        <fieldset>
-                            <label for="mensagem">Mensagem:</label>
-                            <textarea id="mensagem" name="mensagem" rows="4" maxlength="300" placeholder="Escreva sua mensagem" required></textarea>
-                        </fieldset>
-    
-                        <fieldset class="inline-fieldset">
-                            <input type="checkbox" id="aceito" name="aceito" required>
-                            <label for="aceito">Aceito os termos e condições</label>
-                        </fieldset>
-                    </form>
-                    <button type="reset" onclick="clicou()" id="submit-btn">Enviar</button>
-                </div>
-            </section>
+            <div id="contact-container">
+                <form id="contact-form">
+                    <h2>Entre em Contato</h2>
+                    <fieldset>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    </fieldset>
+
+                    <fieldset id="field-assunto" class="inline-fieldset">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione o assunto</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="reclamacao">Reclamação</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" maxlength="300" placeholder="Escreva sua mensagem" required></textarea>
+                    </fieldset>
+
+                    <fieldset class="inline-fieldset">
+                        <input type="checkbox" id="aceito" name="aceito" required>
+                        <label for="aceito">Aceito os termos e condições</label>
+                    </fieldset>
+                </form>
+                <button type="reset" onclick="clicou()" id="submit-btn">Enviar</button>
+            </div>
         </main>
     </div>
     <footer>
