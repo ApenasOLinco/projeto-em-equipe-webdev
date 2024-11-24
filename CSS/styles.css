@@ -208,7 +208,11 @@ footer {
 
 /* Estilo da Página de Contato */
 #contato-pagina {
-    min-height: 100svh;
+    height: 100svh;
+}
+
+#contato-pagina main {
+    vertical-align: middle;
 }
 
 #contato-pagina header {
@@ -221,8 +225,6 @@ footer {
     flex-direction: column ;
     
     background-color: transparent;
-    /* A DISCUTIR: O backdrop deve aumentar ou diminuir o brilho? Qual fica mais fácil de ler? */
-    /* A DISCUTIR: Eu tentei aumentar a força do BLUR e gostei do resultado. Algo entre 30px e 60px. Deveríamos deixar assim ou aumentar? */
     backdrop-filter: blur(17px) brightness(1.05);
     box-shadow: 
         0 4px 6px rgba(0, 0, 0, 0.1);
@@ -248,38 +250,52 @@ footer {
     text-align: center;
 }
 
-#contact-form-section fieldset {
-    text-align: center;
+fieldset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     border: none;
+    margin: 2% 0;
 }
 
-#contact-form label {
-    width: 100%;
+.inline-fieldset {
+    flex-direction: row;
+    gap: 5%;
+    justify-content: flex-start;
+}
+
+label {
     font-weight: bold;
     color: #FFFFFF;
-    text-align: center;
 }
 
-#contact-form input,
-#contact-form textarea {
-    display: block;
-    margin: auto;
+input:not([type="checkbox"]),
+textarea {
+    align-self: center;
+    
+    background-color: transparent;
+    color: var(--branco);
+    backdrop-filter: brightness(.9);
+    
     width: 95%;
+    height: 3.2em;
     padding: 10px;
     margin: 0.5em;
     border-radius: 5px;
     font-size: 14px;
     line-height: 1.5rem;
+
+    transition: backdrop-filter var(--transition-tempo) ease;
 }
 
-#contact-form textarea {
+textarea {
     resize: none;
-    
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
+    backdrop-filter: brightness(.8);
     border-color: var(--cinza-escuro);
 }
 
@@ -297,7 +313,6 @@ footer {
 }
 
 #submit-btn:hover {
-    transform: scale(1.03);
     background-color: #ebb624c7;
     color: var(--branco);
 }
