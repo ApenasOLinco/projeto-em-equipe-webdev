@@ -233,7 +233,6 @@ footer {
     
     display: flex;
     flex-direction: column;
-    gap: 20px;
     
     background-color: transparent;
     backdrop-filter: blur(17px) brightness(1.05);
@@ -261,7 +260,7 @@ fieldset {
 
 .inline-fieldset {
     flex-direction: row;
-    gap: 5%;
+    gap: 2%;
     justify-content: flex-start;
 }
 
