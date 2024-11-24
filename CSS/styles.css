@@ -211,7 +211,16 @@ footer {
 
 /* Estilo da Página de Contato */
 #contato-pagina {
-    min-height: 100svh;
+    /* min-height: 100svh; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contato-pagina main {
+    width: 100%;
+    margin: 5% 0;
 }
 
 #contato-pagina header {
@@ -221,15 +230,17 @@ footer {
 #contact-container {
     max-width: 600px;
     width: 80%;
+    
     display: flex;
     flex-direction: column;
+    gap: 20px;
     
     background-color: transparent;
     backdrop-filter: blur(17px) brightness(1.05);
     box-shadow: 
         0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    gap: 20px;
+
     margin: 0 auto;
     padding: 1.5%;
 }
