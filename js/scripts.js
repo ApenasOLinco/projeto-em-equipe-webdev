@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             clickable: true,
         },
         autoplay: {
-            delay: 3000,
+            delay: 15000,
             disableOnInteraction: false,
         },
         on: {
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     })
-    console.log("Created!");
 });
 
 
