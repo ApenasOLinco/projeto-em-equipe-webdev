@@ -235,14 +235,17 @@ header {
     color: inherit;
 }
 
+.header-abs {
+    position: absolute;
+}
 
 /* Seção Hero */
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 50px;
-
+    margin: 0;
+    
     background-image: url('../Midias/gato.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -270,20 +273,33 @@ header {
 
 /* Estilos do Carrossel */
 .swiper {
-    width: 95%;
-    height: 500px;
+    width: 100%;
+    height: 100svh;
 
     margin: 0 auto;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide > * {
+    flex: 1;
+}
+
 .swiper-wrapper {
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
 .swiper-slide > img {
     max-width: 100%;
-    max-height: 100%;
 
     object-fit: cover;
     border-radius: 10px;
@@ -293,6 +309,10 @@ header {
 .swiper-button-prev {
     width: 40px;
     height: 40px;
+}
+
+.swiper-pagination {
+    position: absolute;
 }
 
 .swiper-pagination-bullet {

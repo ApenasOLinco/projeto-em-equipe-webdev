@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
             el: '.swiper-pagination',
             clickable: true,
         },
-        autoplay: {
+        /* autoplay: {
             delay: 15000,
             disableOnInteraction: false,
-        },
+        }, */
         on: {
             init: function () {
                 window.dispatchEvent(new Event('resize'));
