@@ -1,7 +1,12 @@
 // Criação dos carrosséis
 document.addEventListener("DOMContentLoaded", function() {
     const swiper = new Swiper('.swiper', {
+        noSwiping: true,
+        noSwipingClass: 'no-swiping',
         loop: true,
+        spaceBetween: 120,
+        keyboard: true,
+        allowTouchMove: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -10,10 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
             el: '.swiper-pagination',
             clickable: true,
         },
-        /* autoplay: {
-            delay: 15000,
-            disableOnInteraction: false,
-        }, */
         on: {
             init: function () {
                 window.dispatchEvent(new Event('resize'));
