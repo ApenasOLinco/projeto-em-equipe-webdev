@@ -90,8 +90,16 @@ a {
     color: var(--dourado-suave)
 }
 
+a:hover {
+    color: #f7ebbe;
+}
+
 a:visited {
-    color: var(--branco);
+    color: rgb(238, 130, 238);
+}
+
+a:visited:hover {
+    color: rgb(250, 42, 250);
 }
 
 section {
