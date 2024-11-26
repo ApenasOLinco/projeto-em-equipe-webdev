@@ -258,6 +258,8 @@ header {
 #imagem_inicial{
     position: absolute;
     z-index: -1;
+    filter: blur(2px) brightness(90%);
+    
 
 }
 .hero {
@@ -265,7 +267,7 @@ header {
     flex-direction: column;
     justify-content: center;
     margin: 0;
-
+    backdrop-filter:blur();
     text-align: center;
     height: 100%;
     color: var(--branco);
