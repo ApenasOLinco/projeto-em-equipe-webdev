@@ -60,8 +60,11 @@ iframe {
 
 h1, h2, h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: -3px;
+
     color: var(--branco);
+}
+h1, h2 {
+    letter-spacing: -3px;
 }
 
 h1 {
