@@ -84,10 +84,10 @@ h2 {
 }
 
 p {
-    text-indent: 2ch;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--branco);
+    text-align: justify;
 }
 
 a {
