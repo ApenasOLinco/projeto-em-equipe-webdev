@@ -118,7 +118,6 @@ section:nth-of-type(1) {
     border-top: none;
 }
 
-
 fieldset {
     display: flex;
     justify-content: center;
@@ -213,11 +212,10 @@ header {
 
 #nav-logo {
     height: 70px;
-    width: 150px;
+    max-width: fit-content;
     border-radius: 5px;
     overflow: hidden;
     transition: transform var(--transition-tempo) ease-in-out;
-    object-fit: cover;
 }
 
 #nav-logo img{
@@ -469,13 +467,17 @@ ul li:hover a {
 }
 
 /* PÁGINAS DE PORTIFOLIO */
+#section-apresentacao {
+    display: flex;
+    flex-direction: column;
+}
+
 .img-apresentacao {
     display: block;
 
-    min-width: 10%;
     width: 30%;
-    min-height: 100%;
-    margin: 1em;
+    max-height: 200px;
+    margin: 0 1em;
     float: left;
 }
 
@@ -500,5 +502,20 @@ iframe {
 
     100% {
         background-position: 0 50%;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+    #nav-container {
+        justify-content: center;
+    }
+
+    #nav-logo {
+        display: none;
+    }
+
+    .img-apresentacao {
+        float: left;
     }
 }
