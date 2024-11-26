@@ -165,7 +165,7 @@ textarea {
     align-self: center;
     
     background-color: transparent;
-    color: var(--branco);
+    color: #ffffff;
     backdrop-filter: brightness(.9);
     
     width: 95%;
@@ -209,10 +209,12 @@ header {
 }
 
 #nav-logo {
-    height: 60px;
+    height: 70px;
+    width: 150px;
     border-radius: 5px;
     overflow: hidden;
     transition: transform var(--transition-tempo) ease-in-out;
+    object-fit: cover;
 }
 
 #nav-logo img{
@@ -264,12 +266,6 @@ header {
 }
 
 .hero h1 {
-    text-shadow: 
-        1px 1px black,
-        -1px -1px black,
-        -1px 1px black,
-        1px -1px black;
-
     margin: 0 2ch;
 }
 
@@ -476,7 +472,6 @@ ul li:hover a {
     min-width: 10%;
     width: 30%;
     min-height: 100%;
-
     margin: 1em;
     float: left;
 }
