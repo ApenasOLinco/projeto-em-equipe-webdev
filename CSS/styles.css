@@ -20,7 +20,7 @@
 /* Estilo Geral */
 * {
     box-sizing: border-box; /* Não comentar essa linha! */
-    /* outline: 1px solid red; */
+     /* outline: 1px solid red;  */
 }
 
 ::selection {
@@ -516,64 +516,101 @@ iframe {
     }
 }
 
-/* Media Queries */
-@media (max-width: 500px) {
-    #nav-container {
-        justify-content: center;
-    }
+#videobeca{
+    width: 100%;
+    height: 800px;
+}
 
-    #nav-logo {
-        display: none;
-    }
-
-    .img-apresentacao {
-        float: left;
-    }
+#imgThiago{
+    display: block;
+    margin:auto;
+    height: 400px;
+    width: 20%;
+    border-radius: 10px;
 }
 
 /* Img's das pgs Pessoais */
-/*Arthur*/
-#imgArthur1 {
+.imgArthur1 {
     margin: 0;
     margin-right: 2em;
     height: 490px;
     width: 21%;
     border-radius: 10px;
 }
-#imgArthur2 {
+.imgArthur2 {
     margin-top: 1em;
     margin-left: 2em;
     width: 26%;
     height: 1000px;
     border-radius: 10px;
 }
-#imgArthur3 {
+.imgArthur3 {
     padding-left: -3em;
     height: 543px;
     width: 69%;
     border-radius: 10px;
 }
 
-/*Rebeca*/
-#imgBeca1 {
-    margin: 0;
-    margin-right: 2em;
-    height: 490px;
-    width: 21%;
-    border-radius: 10px;
+/*Responsividade*/
+/*Desktop Medio*/
+@media (max-width: 1720px) {
+    /*Arthur*/
+    .imgArthur2 {
+        width: 35%;
+        height: 1000px;
+        border-radius: 10px;
+    }
+    .imgArthur3 {
+        height: 470px;
+        width: 55%;
+    }
 }
-#imgBeca2 {
-    margin-top: 1em;
-    margin-left: 2em;
-    width: 26%;
-    height: 1000px;
-    border-radius: 10px;
+/*DeskTop pequeno*/
+@media (max-width: 1150px) {
+    .imgArthur1 {
+        width: 30%;
+    }
+    .imgArthur3 {
+        height: 293px;
+        width: 55%;
+    }
 }
-#imgBeca3 {
-    padding-left: -3em;
-    height: 565px;
-    width: 69%;
-    border-radius: 10px;
+/*Tablets*/
+@media (max-width: 885px) {
+    .imgArthur1 {
+        width: 30%;
+    }
+    .imgArthur3 {
+        margin-top: 1em;
+        height: 300px;
+        width: 96%;
+    }
 }
 
-/*Lincoln*/
+/*Disp Moveis*/
+@media (max-width: 660px) {
+    .imgArthur1 {
+        height: 370px;
+        width: 100%;
+    }
+    .imgArthur2 {
+        width: 50%;
+    }
+    .imgArthur3 {
+        height: 380px;
+        width: 95%;
+    }
+
+    #nav-container {
+        justify-content: center;
+    }
+
+    #nav-logo {
+        margin-right: 1em;
+        transform: scale(0.95);
+    }
+
+    .img-apresentacao {
+        float: left;
+    }
+}
